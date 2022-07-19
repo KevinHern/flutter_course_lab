@@ -19,12 +19,12 @@ Y como última tarea en esta pantalla, debes implementar dos botones: uno de res
 
 ### Archivos a modificar
 - main.dart
-- models/eshop_item.dart
-- models/shop.dart
-- ui/items_display.dart
+- ui/form/stock_form.dart
+- ui/form/form_screen.dart
 
 ### Asignaciones
 1) Elige la temática para tu aplicación y modifica el archivo **ui/item_display.dart** para asignar los fonts apropiados a los textos desplegados.
 2) Completa la implementación del formulario ubicado **models/shop.dart** y los botones "reset" y "guardar"
+3) (Opcional) Cambia el Widget de la propiedad 'home' en el archivo **main.dart** al Widget **EShopFormScreen** para probar el formulario. 
 
 
