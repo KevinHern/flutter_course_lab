@@ -21,9 +21,18 @@ Para algunas computadoras y algunos teléfonos, no es necesario que sigas a caba
 
 ## Instrucciones
 
-Como esta es la primera vez que usas Flutter, empezaremos fácil. La tarea que tienes que hacer es simplemente implementar una pantalla que despliegue 10 artículos de cualquier tipo pero que estén relacionados (ejemplo: comida, tecnología, música, etc.) y que al abrir la aplicación, sea lo primero que miras.
+Como esta es la primera vez que usas Flutter, empezaremos fácil. La tarea que tienes que hacer es simplemente implementar una pantalla que despliegue 10 artículos de cualquier tipo pero que estén relacionados (ejemplo: comida, tecnología, música, etc.) y que al abrir la aplicación, sea lo primero que mires.
 Ya se te proporciona código base para que no te sientas perdido. En donde encuentres secciones de **// TO DO ** es donde implementarás tu código.
 
 ### Archivos a modificar
 - main.dart
-- 
+- models/eshop_item.dart
+- models/shop.dart
+- ui/items_display.dart
+
+### Asignaciones
+1) Completa la implementación del modelo **EShopItem** ubicado en el archivo **models/eshop_item.dart**. Como es el artículo que pondrás a venta, debe llevar: Nombre, cantidad de existencias (o stock) y un código de producto (puede ser inventado). Además, el constructor recibirá como parámetros el Nombre del artículo, el número que hay en stock y el código.
+2) Crea 10 elementos ficticios para tu tienda al llenar la lista de artículos y completa los métodos del modelo ShopItems ubicada en el archivo **models/shop.dart**
+3) Crea la pantalla para desplegar el listado de tus artículos, siguiendo las instrucciones anotadas en el archivo **ui/items_display.dart**.
+
+
