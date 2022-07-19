@@ -25,7 +25,6 @@ Y como última tarea en esta pantalla, debes implementar dos botones: uno de res
 
 ### Asignaciones
 1) Elige la temática para tu aplicación y modifica el archivo **ui/item_display.dart** para asignar los fonts apropiados a los textos desplegados.
-2) Completa la implementación del formulario ubicado **models/shop.dart**
-3) Crea la pantalla para desplegar el listado de tus artículos, siguiendo las instrucciones anotadas en el archivo **ui/items_display.dart**.
+2) Completa la implementación del formulario ubicado **models/shop.dart** y los botones "reset" y "guardar"
 
 
