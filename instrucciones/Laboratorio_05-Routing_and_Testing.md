@@ -23,7 +23,7 @@ Algo que sabemos es que ambas pantallas comparten el modelo **Shop**. Si por med
 Debo de recordarte que por ninguna circunstancia el nuevo producto agregado debe de desaparecer. Es un detalle muy sútil pero importante.
 
 Y por último, aprenderás a realizar **Unit Testing** empleando el API que Flutter proporciona. No harás pruebas muy complicadas ya que hasta el momento no hemos realizado una aplicación muy complicada.
-Te proporcioné una prueba ya realizada y documentada para que observes cómo es que se implementan y el flujo que se debe de seguir. Debes de pasar todas las pruebas que se encuentran en los archivos **test/models/shop_model_test.dart**. 
+Te proporcioné una prueba ya realizada y documentada para que observes cómo es que se implementan y el flujo que se debe de seguir. Debes de pasar todas las pruebas que se encuentran en los archivos **test/models/shop_model_test.dart**.
 
 ### Archivos a modificar
 - main.dart
@@ -35,3 +35,6 @@ Te proporcioné una prueba ya realizada y documentada para que observes cómo es
 2) Completa las pruebas encontradas en el archivo **test/models/shop_model_test.dart**
 3) Implementa un las propiedades 'initialRoute', 'routes' y 'onGenerateRoute' del sistema de navegación en **main.dart**
 4) Completa las función **onFormPress** en **ui/components/navigation_drawer.dart** para terminar de enlazar el sistema de rutas implementado en **main.dart** y el las interacciones del usuario
+
+## Observaciones
+Cuando termines de implementar el formulario y el sistema de rutas, te darás cuenta que cuando agregues un producto empleando el formulario y regreses al catálogo, el producto aún no se mostrará. Este problema lo resolveremos en el Laboratorio #07.
