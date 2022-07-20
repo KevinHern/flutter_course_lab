@@ -3,10 +3,10 @@ import 'package:flutter_course_labs/models/shop.dart';
 import 'package:flutter_course_labs/ui/components/navigation_drawer.dart';
 
 /*
-    TO DO Laboratory #02 count: 1
-    TO DO Laboratory #04 count: 1
-    TO DO Laboratory #05 count: 1
-    TO DO Laboratory #07 count: 1
+    TODO Laboratory #02 count: 1
+    TODO Laboratory #04 count: 1
+    TODO Laboratory #05 count: 1
+    TODO Laboratory #07 count: 1
 */
 
 /// This is the root Widget of your application!
@@ -34,10 +34,10 @@ class MainScreenState extends State<MainScreen> {
         appBar: AppBar(
           automaticallyImplyLeading: true,
 
-          // TO DO Laboratory #02
+          // TODO Laboratory #02
           /// Edit the text by introducing the name of your shop
 
-          // TO DO Laboratory #04
+          // TODO Laboratory #04
           /// Remember to edit the font type. This is the title and you want to emphasize the name
           /// of the shop so the people can easily see it and remember it
           title: Text(
@@ -51,7 +51,7 @@ class MainScreenState extends State<MainScreen> {
         drawer: NavDrawer(
           scaffoldKey: _scaffoldKey,
 
-          // TO DO Laboratory #05
+          // TODO Laboratory #05
           /// You have to implement a way that links the UI, user interaction and the implemented Routing
           /// System in the main.dart file (initialRoute, Route Map, onGenerateRoute, etc.)
           /// When you press a certain option of this menu, you have to display the proper screen and this
@@ -64,10 +64,25 @@ class MainScreenState extends State<MainScreen> {
           /// Remember that the EShopFormScreen Widget needs a shop model. If you look carefully, this Widget has
           /// access to said model. Remember to pass it as an argument by using the
           /// 'arguments' property of the pushNamed function!
-          onFormPress: () => {},
+          ///
+          /// You will find Laboratory #07 instructions but ignore them for the time being
+          onFormPress: () {
+            // Your function here
 
-          // TO DO Laboratory #07
-          onCartPress: () => {},
+            // TODO Laboratory #07
+            /// Once you have finished the MyCart Model implementation and completed MyCartScreen Screen, fix this
+            /// function by converting it to an async function.
+            /// Await the operation Navigator.of(context).pushNamed() and implement a callback by writing a '.then()'
+            /// function that forces the UI to update after the user returns from the screen.
+            ///
+            /// Basically, your function has to look something like this:
+            ///
+            /// await Navigator.(blah blah blah).then(() => updateUI());
+          },
+
+          // TODO Laboratory #07
+          /// Do the same for the MyCart Screen
+          onCartPress: () {},
         ),
         body: Container(),
       ),

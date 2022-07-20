@@ -38,8 +38,12 @@ dependencies:
   # UI Fonts
   google_fonts: ^3.0.1
 
-  # UI Page transitions
+  # UI
   page_transition: ^2.0.9
+  sn_progress_dialog: ^1.0.8
+
+  # Network
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:

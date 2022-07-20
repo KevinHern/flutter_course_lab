@@ -20,7 +20,6 @@ import 'package:flutter/material.dart';
 ///     * Subtitle
 /// - Padding
 ///     * Padding
-/// - Center
 ///
 /// Observations:
 /// - For the moment, nothing should happen when pressing an item
