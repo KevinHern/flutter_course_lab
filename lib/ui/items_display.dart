@@ -8,12 +8,9 @@ import 'package:flutter/material.dart';
 /// The first step before creating the class is to establish if this screen is Stateless or Stateful.
 /// Think some steps ahead. You know that the shop articles have a number that represent their stock.
 /// So when a user buys the article or you replenish the stock, the number changes and the UI
-/// has to update to reflect the current values.
+/// has to update to reflect the current values. But that UI update... is it done here or in the main_screen.dart?
 ///
 /// Widgets to use:
-/// - Scaffold
-/// - AppBar
-///     * Title (name of your shop)
 /// - ListView.builder
 ///     * ItemCount
 ///     * Builder

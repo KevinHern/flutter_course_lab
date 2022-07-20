@@ -7,7 +7,7 @@ class EShopItem {
   /// Are the Variables final, dynamic or var? The name and code of the article don't seem very likely to change. What about the stock?
   /// I'll help you with one
 
-  final String codeProduct;
+  final String codeProduct = '';
 
   // TO DO Laboratory #01
   /// It is going to receive the name and code of the article, and the stock number

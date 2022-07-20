@@ -50,7 +50,7 @@ class StockFormState extends State<StockForm> {
                     : {},
                 child: Text(
                   'Ok',
-                  style: Theme.of(context).textTheme.bodyText1!,
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
               ),
             ],
@@ -108,7 +108,7 @@ class StockFormState extends State<StockForm> {
                     /// - If you want the String field to check for a format, you have to use Regular Expressions
                     ///
                     /// If the input field is acceptable, then you have to return null. The null values tells the form
-                    /// that this particular Input Field contains a valid value
+                    /// that this particular Input Field contains a valid value.
 
                     return null;
                   },

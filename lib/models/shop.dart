@@ -2,6 +2,7 @@ import 'eshop_item.dart';
 
 /*
     TO DO Laboratory #02 count: 1
+    TO DO Laboratory #05 count: 1
 */
 
 class Shop {
@@ -19,9 +20,9 @@ class Shop {
     /// With the 'add' method, we can add elements to the empty list.
     /// Once you finish implementing EShopClass, you will notice you have to modify this instruction.
     /// Repeat this 10 times.
-    _goods.add(
-      EShopItem(),
-    );
+    // _goods.add(
+    //   EShopItem(),
+    // );
   }
 
   /* ----- Provided Code for Laboratory #04 ----- */
@@ -39,4 +40,10 @@ class Shop {
   }
 
   void addProduct({required EShopItem item}) => _goods.add(item);
+
+  // TO DO Laboratory #05
+  bool isCatalogEmpty() => true;
+
+  // TO DO Laboratory #05
+  void clearCatalog() => {};
 }

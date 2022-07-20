@@ -21,6 +21,7 @@ Y como última tarea en esta pantalla, debes implementar dos botones: uno de res
 - main.dart
 - ui/form/stock_form.dart
 - ui/form/form_screen.dart
+- ui/components/navigation_drawer.dart
 
 ### Asignaciones
 1) Elige la temática para tu aplicación y modifica el archivo **ui/item_display.dart** para asignar los fonts apropiados a los textos desplegados.

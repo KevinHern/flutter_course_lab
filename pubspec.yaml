@@ -38,6 +38,9 @@ dependencies:
   # UI Fonts
   google_fonts: ^3.0.1
 
+  # UI Page transitions
+  page_transition: ^2.0.9
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
