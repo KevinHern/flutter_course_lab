@@ -6,7 +6,7 @@ import 'package:flutter_course_labs/ui/components/navigation_drawer.dart';
     TODO Laboratory #02 count: 1
     TODO Laboratory #04 count: 1
     TODO Laboratory #05 count: 1
-    TODO Laboratory #07 count: 1
+    TODO Laboratory #07 count: 2
 */
 
 /// This is the root Widget of your application!

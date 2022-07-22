@@ -10,9 +10,9 @@ void main() {
 }
 
 /*
-    TO DO Laboratory #02 count: 1
-    TO DO Laboratory #04 count: 3
-    TO DO Laboratory #05 count: 1
+    TODO Laboratory #02 count: 1
+    TODO Laboratory #04 count: 3
+    TODO Laboratory #05 count: 1
 */
 
 class MyApp extends StatelessWidget {
@@ -25,13 +25,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
 
-        // TO DO Laboratory #04
+        // TODO Laboratory #04
         /// Select a primary color and write here its 3 variations according to the Material Design Scheme.
         primaryColor: null,
         primaryColorLight: null,
         primaryColorDark: null,
 
-        // TO DO Laboratory #04
+        // TODO Laboratory #04
         /// Select one font for a Headline, Subtitle and Body text and write them here. You will likely use
         /// Google Fonts package because it contains most if not all the existing fonts used for commercial purposes.
         /// Also remember, each type of font will have different font sizes and whatnot. Some may be bold by default and
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      // TO DO Laboratory #02 and #04
+      // TODO Laboratory #02 and #04
       /// Replace the Widget with the Widget that contains your screen
       home: MainScreen(),
 

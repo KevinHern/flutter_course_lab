@@ -3,8 +3,8 @@ import 'package:flutter_course_labs/models/shop.dart';
 import 'package:flutter_course_labs/ui/form/stock_form.dart';
 
 /*
-    TO DO Laboratory #04 count: 1
-    TO DO Laboratory #05 count: 1
+    TODO Laboratory #04 count: 1
+    TODO Laboratory #05 count: 1
 */
 
 class EShopFormScreen extends StatelessWidget {
@@ -24,11 +24,11 @@ class EShopFormScreen extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          // TO DO Laboratory #05
+          // TODO Laboratory #05
           /// When we press this button, the Navigator should take us to the root Screen of our application
           onPressed: () => {},
         ),
-        // TO DO Laboratory #04
+        // TODO Laboratory #04
         /// Here you put your Shop's name
         //title: ,
       ),

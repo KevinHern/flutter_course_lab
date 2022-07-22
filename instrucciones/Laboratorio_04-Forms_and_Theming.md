@@ -17,15 +17,17 @@ Una vez hayas terminado, vuelve al archivo **ui/item_display.dart** para editar 
 Y por último, para añadirle más funcionamiento a la aplicación, crearás una pantalla que tenga un formulario donde te permita ingresar nuevos productos al catálogo. Debes de asegurarte que el formulario logre validar el input. Esto quiere decir que implementarás las debidas restricciones (como por ejemplo, el número ingresado en stock no debe ser negativo, tampoco debe de haber espacios en blanco innecesarios al inicio o al final del nombre o código del producto). Te ayudará mucho la propiedad 'validator' en los TextFormField Widgets.
 Y como última tarea en esta pantalla, debes implementar dos botones: uno de reset y otro para crear un producto en base a los inputs del formulario y agregarlo al catálogo de la tienda. Encontrás una guía más instrucciones en el archivo **ui/form/eshop_form.dart**.
 
-### Archivos a modificar
+## Archivos a modificar
 - main.dart
 - ui/form/stock_form.dart
 - ui/form/form_screen.dart
 - ui/components/navigation_drawer.dart
 
-### Asignaciones
+## Asignaciones
 1) Elige la temática para tu aplicación y modifica el archivo **ui/item_display.dart** para asignar los fonts apropiados a los textos desplegados.
 2) Completa la implementación del formulario ubicado **models/shop.dart** y los botones "reset" y "guardar"
 3) (Opcional) Cambia el Widget de la propiedad 'home' en el archivo **main.dart** al Widget **EShopFormScreen** para probar el formulario. 
 
+## Observaciones
+- Puedes consultar el código fuente de la demostración de los archivos [lib/unit_two/form.dart](https://github.com/KevinHern/flutter_course/blob/main/lib/unit_two/form.dart) y [lib/main.dart](https://github.com/KevinHern/flutter_course/blob/main/lib/main.dart) 
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /*
-    TO DO Laboratory #04 count: 3
+    TODO Laboratory #04 count: 3
 */
 
 class NavDrawer extends StatelessWidget {
@@ -29,7 +29,7 @@ class NavDrawer extends StatelessWidget {
             child: Align(
               alignment: Alignment.bottomLeft,
 
-              // TO DO Laboratory #04
+              // TODO Laboratory #04
               /// Change font style
               child: Text(
                 'Bienvenido',
@@ -38,7 +38,7 @@ class NavDrawer extends StatelessWidget {
             ),
           ),
 
-          // TO DO Laboratory #04
+          // TODO Laboratory #04
           /// Change the Icon's color to the primary color you defined and change the font style too
           ListTile(
             leading: Icon(
@@ -52,7 +52,7 @@ class NavDrawer extends StatelessWidget {
             onTap: () => onFormPress(),
           ),
 
-          // TO DO Laboratory #04
+          // TODO Laboratory #04
           /// Change the Icon's color to the primary color you defined and change the font style too
           ListTile(
             leading: Icon(

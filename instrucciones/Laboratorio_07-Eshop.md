@@ -22,7 +22,7 @@ Y como último detalle, lo que tienes que hacer es implementar un botón en la p
 
 Si llegaste hasta aquí, terminaste y todo funciona debidamente, déjame felicitarte porque ya estás capacitado o capacitada para usar tus conocimientos en Flutter para realizar aplicaciones y ponerlas en el mercado. Aún queda mucho más por aprender y si te interesa seguir adentrándote en el mundo de Flutter, te dejo un Road Map para que mires qué más puedes aprender [aquí](https://github.com/olexale/flutter_roadmap/blob/master/images/FlutterRoadmap.png).  
 
-### Archivos a modificar
+## Archivos a modificar
 - ui/models/cart.dart
 - ui/items_display.dart
 - ui/my_cart.dart
@@ -35,3 +35,6 @@ Si llegaste hasta aquí, terminaste y todo funciona debidamente, déjame felicit
 3) Terminar la implementación de la pantalla **MyCartScreen** ubicada en **ui/my_cart.dart**
 4) Aplicar programación asíncrona en el archivo **ui/components/navigation_drawer.dart** para obligar una actualización en el UI al implementar un callback '.then()' a la instrucción 'Navigator.of(context).pushNamed()'.
 5) Implementar un botón en **ui/my_cart.dart** que cree un JSON y lo mande al servidor **<insertar servidor>** por medio de un HTTP POST Request. Por último, que espere por la respuesta del servidor y despliegue un mensaje de retroalimentación al usuario.
+
+## Observaciones
+- Puedes consultar el código fuente de la demostración de los archivos [lib/unit_two/example/cart_shop.dart](https://github.com/KevinHern/flutter_course/blob/main/lib/unit_two/example/cart_shop.dart) y [lib/unit_three/example.dart](https://github.com/KevinHern/flutter_course/blob/main/lib/unit_three/example.dart)

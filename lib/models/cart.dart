@@ -1,7 +1,7 @@
 import 'eshop_item.dart';
 
 /*
-    TO DO Laboratory #07 count: 1
+    TODO Laboratory #07 count: 1
 */
 
 /// This model is essentially the same as the Shop model. However, the difference is that
@@ -12,7 +12,7 @@ import 'eshop_item.dart';
 class MyCart {
   final List<EShopItem> _myCart;
 
-  // TO DO Laboratory #07
+  // TODO Laboratory #07
   /// Initialize the variable '_myCart' as an empty list
   MyCart();
 

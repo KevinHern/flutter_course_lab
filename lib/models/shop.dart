@@ -1,8 +1,8 @@
 import 'eshop_item.dart';
 
 /*
-    TO DO Laboratory #02 count: 1
-    TO DO Laboratory #05 count: 1
+    TODO Laboratory #02 count: 1
+    TODO Laboratory #05 count: 2
 */
 
 class Shop {
@@ -12,7 +12,7 @@ class Shop {
   /// This is the constructor. When a Shop is instantiated, we want to have already defined items.
   /// This is the perfect place for filling up the goods list which contains all te articles you want to create.
 
-  // TO DO Laboratory #02
+  // TODO Laboratory #02
   Shop() {
     /// We have to initialize a List, don't we? Else, how can we fill it up?
     _goods = [];
@@ -41,9 +41,9 @@ class Shop {
 
   void addProduct({required EShopItem item}) => _goods.add(item);
 
-  // TO DO Laboratory #05
+  // TODO Laboratory #05
   bool isCatalogEmpty() => true;
 
-  // TO DO Laboratory #05
+  // TODO Laboratory #05
   void clearCatalog() => {};
 }

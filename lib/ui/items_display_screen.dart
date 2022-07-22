@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 /*
-    TO DO Laboratory #02 count: 1
+    TODO Laboratory #02 count: 1
 */
 
-// TO DO Laboratory #02
+// TODO Laboratory #02
 /// The first step before creating the class is to establish if this screen is Stateless or Stateful.
 /// Think some steps ahead. You know that the shop articles have a number that represent their stock.
 /// So when a user buys the article or you replenish the stock, the number changes and the UI

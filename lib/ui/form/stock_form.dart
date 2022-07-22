@@ -4,7 +4,7 @@ import 'package:flutter_course_labs/models/eshop_item.dart';
 import '../../models/shop.dart';
 
 /*
-    TO DO Laboratory #04 count: 6
+    TODO Laboratory #04 count: 6
 */
 
 class StockForm extends StatefulWidget {
@@ -25,7 +25,7 @@ class StockFormState extends State<StockForm> {
   /// all the input values to see if it is possible to do some future operations with the given information
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  // TO DO Laboratory #04
+  // TODO Laboratory #04
   /// Since a shop article requires 3 fields to be created, our form will contain 3 input fields that each one will
 
   void _showFeedback({required String message}) => showDialog(
@@ -64,13 +64,13 @@ class StockFormState extends State<StockForm> {
       child: Padding(
         padding: const EdgeInsets.all(padding),
         child: Form(
-          // TO DO Laboratory #04
+          // TODO Laboratory #04
           /// The Form Widget has a property called 'key' which is where we put the formKey we created before
           // key: ,
           autovalidateMode: AutovalidateMode.always,
           child: Column(
             children: [
-              // TO DO Laboratory #04
+              // TODO Laboratory #04
               /// Here you will complete the form by programming the remaining TextFormFields and configuring each
               /// one to receive some kind of value.
               /// Remember, you want the form to capture the following information:
@@ -102,7 +102,7 @@ class StockFormState extends State<StockForm> {
                   textInputAction: TextInputAction.none,
                   keyboardType: TextInputType.none,
                   validator: (String? value) {
-                    // TO DO Laboratory #04
+                    // TODO Laboratory #04
                     /// Some checks for any type of Input Field:
                     /// - Remove all the spaces (use .trim() function) and check if its empty (use isEmpty getter)
                     /// - If you want the String field to check for a format, you have to use Regular Expressions
@@ -132,7 +132,7 @@ class StockFormState extends State<StockForm> {
                       () {
                         final String blank = "";
 
-                        // TO DO Laboratory #04
+                        // TODO Laboratory #04
                         /// Everytime the reset button is pressed, you want to reset the input fields to a default value.
                         /// Normally, the default value is just blank - no characters or strings.
                         ///
@@ -153,7 +153,7 @@ class StockFormState extends State<StockForm> {
                       primary: Theme.of(context).primaryColor,
                     ),
                     onPressed: () {
-                      // TO DO Laboratory #04
+                      // TODO Laboratory #04
                       /// The save button is arguable the most important button in every form.
                       /// The button follows a straightforward flowchart:
                       /// 1) It validates the current state of the form, checking if every Input Field

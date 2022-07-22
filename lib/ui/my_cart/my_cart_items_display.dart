@@ -36,7 +36,7 @@ class MyCartItemsDisplayState extends State<MyCartItemsDisplay> {
     ///     * Padding
     ///
     /// To access the variables located in the MyCartItemsDisplay class, use widget.shop or widget.myCart.
-    throw Center(
+    return Center(
       child: null,
     );
   }
