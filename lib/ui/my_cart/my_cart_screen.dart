@@ -50,13 +50,15 @@ class MyCartScreen extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
             // TODO Laboratory #07
             /// When we press this button, the Navigator should take us to the root Screen of our application
-            onPressed: () => {},
+            onPressed: () => Navigator.of(context).canPop()
+                ? Navigator.of(context).pop()
+                : {},
           ),
           // TODO Laboratory #07
           /// Here you put your Shop's name and edit the font style
           title: Text(
-            'Your Shop Name Here',
-            style: null,
+            'Cool Shop',
+            style: Theme.of(context).textTheme.headline1,
           ),
         ),
         body: SingleChildScrollView(
@@ -67,13 +69,16 @@ class MyCartScreen extends StatelessWidget {
 
                 // TODO Laboratory #07
                 /// Edit the font style
-                style: null,
+                style: Theme.of(context).textTheme.headline1,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: padding * 2.5),
-                child: MyCartItemsDisplay(
-                  shop: shop,
-                  myCart: myCart,
+                child: SizedBox(
+                  height: 500,
+                  child: MyCartItemsDisplay(
+                    shop: shop,
+                    myCart: myCart,
+                  ),
                 ),
               ),
               ElevatedButton.icon(
@@ -110,6 +115,7 @@ class MyCartScreen extends StatelessWidget {
                   /// any message you want
 
                   // Show the loader here
+                  loader.show(max: 1, msg: 'Procesando...');
 
                   /// After showing the loader, we have to prepare the data before sending it to the server.
                   /// The server only accepts JSON and in this specific format:
@@ -162,7 +168,7 @@ class MyCartScreen extends StatelessWidget {
                     /// already exists as a Key.
                     ///
                     /// Assign the product's code to the variable
-                    final String productCode;
+                    final String productCode = item.code;
 
                     if (finalJson.containsKey(productCode)) {
                       /// If the product already exists, lets increase its quantity by 1
@@ -192,7 +198,7 @@ class MyCartScreen extends StatelessWidget {
                     headers: <String, String>{
                       'Content-Type': 'application/json',
                     },
-                    body: jsonEncode(),
+                    body: jsonEncode(finalJson),
                   );
 
                   /// 4) After we received the response, lets check the status code to see
@@ -222,10 +228,10 @@ class MyCartScreen extends StatelessWidget {
                     /// Feel free to write whatever you want
                     if (responseJson['success']) {
                       // Success Message
-                      message = "";
+                      message = "Operación completada";
                     } else {
                       // Failure message
-                      message = "";
+                      message = "Operación fallida";
                     }
                   } else {
                     /// If for whatever reason something caused an error, lets just display a generic message to
@@ -237,6 +243,8 @@ class MyCartScreen extends StatelessWidget {
 
                   /// 5) Y el último paso consiste en cerrar el loader y desplegar el mensaje al usuario
                   if (loader.isOpen()) {
+                    // TODO Laboratory #07
+                    /// Close the loader with .close()
                     loader.close();
                   }
 

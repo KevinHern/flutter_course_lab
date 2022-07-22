@@ -25,16 +25,18 @@ Si llegaste hasta aquí, terminaste y todo funciona debidamente, déjame felicit
 ## Archivos a modificar
 - ui/models/cart.dart
 - ui/items_display.dart
-- ui/my_cart.dart
+- ui/my_cart/my_cart_items_display.dart
+- ui/my_cart/my_cart_screen.dart
 - main.dart
 - ui/components/navigation_drawer.dart
 
 ## Asignaciones
 1) Terminar la implementación del modelo **Cart** ubicado en **ui/models/cart.dart**
 2) Ajustar la pantalla 'ItemDisplayScreen' ubicada en **ui/items_display.dart** para añadirle la interacción debida con el modelo **Cart** y afinar detalles sobre el despliegue de elementos del UI
-3) Terminar la implementación de la pantalla **MyCartScreen** ubicada en **ui/my_cart.dart**
+3) Terminar la implementación de la pantalla **MyCartItemsDisplay** ubicada en **ui/my_cart/my_cart_items_display.dart**
 4) Aplicar programación asíncrona en el archivo **ui/components/navigation_drawer.dart** para obligar una actualización en el UI al implementar un callback '.then()' a la instrucción 'Navigator.of(context).pushNamed()'.
-5) Implementar un botón en **ui/my_cart.dart** que cree un JSON y lo mande al servidor **<insertar servidor>** por medio de un HTTP POST Request. Por último, que espere por la respuesta del servidor y despliegue un mensaje de retroalimentación al usuario.
+5) Terminar la implementación de la navegación hacia la pantalla **ui/my_cart/my_cart_screen.dart** al completar las implementaciones en **main.dart** y en **main_screen.dart**
+6) Completar la pantalla **ui/my_cart/my_cart_screen.dart**
 
 ## Observaciones
 - Puedes consultar el código fuente de la demostración de los archivos [lib/unit_two/example/cart_shop.dart](https://github.com/KevinHern/flutter_course/blob/main/lib/unit_two/example/cart_shop.dart) y [lib/unit_three/example.dart](https://github.com/KevinHern/flutter_course/blob/main/lib/unit_three/example.dart)

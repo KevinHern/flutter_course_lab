@@ -1,4 +1,5 @@
 // Basic Imports
+import 'package:flutter_course_labs/models/eshop_item.dart';
 import 'package:flutter_course_labs/models/shop.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -90,9 +91,13 @@ void main() {
         () {
           /// Step 1: Prepare Data
           final Shop shop = Shop();
+          final EShopItem dummyItem =
+              EShopItem(name: 'name', stock: 1, code: 'code');
+
+          shop.addProduct(item: dummyItem);
 
           /// Step 2: Perform the Test
-          final bool result = shop.checkProduct(codeProduct: codeProduct);
+          final bool result = shop.checkProduct(codeProduct: dummyItem.code);
 
           /// Step 3: Compare results
           expect(result, true);
