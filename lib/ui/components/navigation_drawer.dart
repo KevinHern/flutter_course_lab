@@ -21,8 +21,8 @@ class NavDrawer extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.all(0.0),
         children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
+          DrawerHeader(
+            decoration: const BoxDecoration(
               color: Colors.green,
               image: null,
             ),
@@ -33,7 +33,7 @@ class NavDrawer extends StatelessWidget {
               /// Change font style
               child: Text(
                 'Bienvenido',
-                style: null,
+                style: Theme.of(context).textTheme.subtitle1,
               ),
             ),
           ),
@@ -43,11 +43,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.list_alt,
-              color: null,
+              color: Theme.of(context).primaryColor,
             ),
             title: Text(
               'Form',
-              style: null,
+              style: Theme.of(context).textTheme.subtitle1,
             ),
             onTap: () => onFormPress(),
           ),
@@ -57,11 +57,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.shopping_cart,
-              color: null,
+              color: Theme.of(context).primaryColor,
             ),
             title: Text(
               'Shopping Cart',
-              style: null,
+              style: Theme.of(context).textTheme.subtitle1,
             ),
             onTap: () => onCartPress(),
           ),

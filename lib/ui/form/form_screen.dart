@@ -3,7 +3,7 @@ import 'package:flutter_course_labs/models/shop.dart';
 import 'package:flutter_course_labs/ui/form/stock_form.dart';
 
 /*
-    TODO Laboratory #04 count: 1
+    TODO Laboratory #04 count: 2
     TODO Laboratory #05 count: 1
 */
 
@@ -26,19 +26,30 @@ class EShopFormScreen extends StatelessWidget {
           icon: const Icon(Icons.arrow_back),
           // TODO Laboratory #05
           /// When we press this button, the Navigator should take us to the root Screen of our application
-          onPressed: () => {},
+          /// First check if its possible to pop with Navigator.of(context).canPop() and then perform the pop()
+          /// operation
+          onPressed: () =>
+              Navigator.of(context).canPop() ? Navigator.of(context).pop() : {},
         ),
         // TODO Laboratory #04
         /// Here you put your Shop's name
-        //title: ,
+        title: Text(
+          'Cool Shop',
+          style: Theme.of(context).textTheme.headline1,
+        ),
       ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
+              // TODO Laboratory #04
+              /// Edit the font here
               Padding(
                 padding: const EdgeInsets.only(bottom: padding),
-                child: Text("Your title here with the font"),
+                child: Text(
+                  "Formulario",
+                  style: Theme.of(context).textTheme.headline1,
+                ),
               ),
 
               /// The actual form. Check the file ui/stock_form.dart for the implementation

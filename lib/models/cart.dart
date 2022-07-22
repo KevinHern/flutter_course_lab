@@ -14,14 +14,14 @@ class MyCart {
 
   // TODO Laboratory #07
   /// Initialize the variable '_myCart' as an empty list
-  MyCart();
+  MyCart() : this._myCart = [];
 
   /* ----- Provided Code for Laboratory #07 ----- */
   bool checkProduct({required String codeProduct}) {
     /// Checks for every item in your catalog and compares their Code Product
     for (EShopItem item in _myCart) {
       /// If a match was found, then the product already exists and returns true
-      if (item.codeProduct == codeProduct) {
+      if (item.code == codeProduct) {
         return true;
       }
     }
@@ -31,6 +31,8 @@ class MyCart {
   }
 
   void addProduct({required EShopItem item}) => _myCart.add(item);
+  void removeProduct({required int index}) => _myCart.removeAt(index);
+  int get length => _myCart.length;
 
   List<EShopItem> get myCart => _myCart;
 }
