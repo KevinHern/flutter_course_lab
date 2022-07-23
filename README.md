@@ -11,3 +11,7 @@ Este repositorio está relacionado con el Curso de Flutter encontrado en [este r
 Este proyecto consistirá en desarrollar una aplicación de e-commerce donde estarás implementando un E-Shop ficticio de la temática que desees. Conforme avances en las unidades del curso, podrás realizar los distintos laboratorios que encontrarás en la carpeta de [instrucciones](https://github.com/KevinHern/flutter_course_lab/tree/main/instrucciones).
 
 Ya encontrarás algunos archivos con código ya comentado para ayudarte en la elobaración de las distintas partes. Si te quedas estancado, siempre puedes revisar el código fuente de [esta demostración](https://kevinhern.github.io/flutter_course_demo/#/) en [este repositorio](https://github.com/KevinHern/flutter_course).
+
+Además, encontrarás el proyecto ya resuelto en [este branch del mismo repositorio](https://github.com/KevinHern/flutter_course_lab/tree/solution) en caso que quieras comparar resultados o ver cómo se realizó cierta asignación en algún laboratorio.
+
+¡Te deseo muchos éxitos!
