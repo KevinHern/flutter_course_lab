@@ -50,15 +50,13 @@ class MyCartScreen extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
             // TODO Laboratory #07
             /// When we press this button, the Navigator should take us to the root Screen of our application
-            onPressed: () => Navigator.of(context).canPop()
-                ? Navigator.of(context).pop()
-                : {},
+            onPressed: () => {},
           ),
           // TODO Laboratory #07
           /// Here you put your Shop's name and edit the font style
           title: Text(
-            'Cool Shop',
-            style: Theme.of(context).textTheme.headline1,
+            "Your Shop's Name",
+            style: null,
           ),
         ),
         body: SingleChildScrollView(
@@ -69,7 +67,7 @@ class MyCartScreen extends StatelessWidget {
 
                 // TODO Laboratory #07
                 /// Edit the font style
-                style: Theme.of(context).textTheme.headline1,
+                style: null,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: padding * 2.5),
@@ -115,7 +113,6 @@ class MyCartScreen extends StatelessWidget {
                   /// any message you want
 
                   // Show the loader here
-                  loader.show(max: 1, msg: 'Procesando...');
 
                   /// After showing the loader, we have to prepare the data before sending it to the server.
                   /// The server only accepts JSON and in this specific format:
@@ -168,7 +165,7 @@ class MyCartScreen extends StatelessWidget {
                     /// already exists as a Key.
                     ///
                     /// Assign the product's code to the variable
-                    final String productCode = item.code;
+                    final String productCode = "";
 
                     if (finalJson.containsKey(productCode)) {
                       /// If the product already exists, lets increase its quantity by 1
@@ -198,7 +195,7 @@ class MyCartScreen extends StatelessWidget {
                     headers: <String, String>{
                       'Content-Type': 'application/json',
                     },
-                    body: jsonEncode(finalJson),
+                    body: jsonEncode(),
                   );
 
                   /// 4) After we received the response, lets check the status code to see
@@ -245,7 +242,6 @@ class MyCartScreen extends StatelessWidget {
                   if (loader.isOpen()) {
                     // TODO Laboratory #07
                     /// Close the loader with .close()
-                    loader.close();
                   }
 
                   showDialog(

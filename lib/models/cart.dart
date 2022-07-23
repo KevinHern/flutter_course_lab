@@ -1,7 +1,7 @@
 import 'eshop_item.dart';
 
 /*
-    TODO Laboratory #07 count: 1
+    TODO Laboratory #07 count: 4
 */
 
 /// This model is essentially the same as the Shop model. However, the difference is that
@@ -14,7 +14,7 @@ class MyCart {
 
   // TODO Laboratory #07
   /// Initialize the variable '_myCart' as an empty list
-  MyCart() : this._myCart = [];
+  MyCart();
 
   /* ----- Provided Code for Laboratory #07 ----- */
   bool checkProduct({required String codeProduct}) {
@@ -30,9 +30,17 @@ class MyCart {
     return false;
   }
 
-  void addProduct({required EShopItem item}) => _myCart.add(item);
   void removeProduct({required int index}) => _myCart.removeAt(index);
-  int get length => _myCart.length;
 
-  List<EShopItem> get myCart => _myCart;
+  // TODO Laboratory #07
+  /// Add the item to the myCart variable
+  void addProduct({required EShopItem item}) => {};
+
+  // TODO Laboratory #07
+  /// Return the total elements in myCart
+  int get length => 0;
+
+  // TODO Laboratory #07
+  /// Return myCart
+  List<EShopItem> get myCart => [];
 }

@@ -4,7 +4,7 @@ import 'package:flutter_course_labs/models/shop.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /*
-    TO DO Laboratory #05 count: 3
+    TODO Laboratory #05 count: 3
 */
 
 void main() {
@@ -41,7 +41,7 @@ void main() {
   group(
     'Shop Model Tests',
     () {
-      // TO DO Laboratory #05
+      // TODO Laboratory #05
       /// Complete the test
       test(
         "'isCatalogEmpty' should return FALSE when called on a Shop Model with catalog that contains at least one element",
@@ -65,7 +65,7 @@ void main() {
         },
       );
 
-      // TO DO Laboratory #05
+      // TODO Laboratory #05
       /// Complete the test
       test(
         "'clearCatalog' should wipe out the catalog when called on a Shop Model no matter if it contains products or not",
@@ -74,7 +74,6 @@ void main() {
           final Shop shop = Shop();
 
           /// Step 2: Perform the Test
-          shop.clearCatalog();
           final bool result = shop.isCatalogEmpty();
 
           /// Step 3: Compare results
@@ -84,20 +83,18 @@ void main() {
         },
       );
 
-      // TO DO Laboratory #05
+      // TODO Laboratory #05
       /// Complete the test
       test(
         "'addProduct' should add a product to the catalog when called on a Shop Model",
         () {
           /// Step 1: Prepare Data
-          final Shop shop = Shop();
-          final EShopItem dummyItem =
-              EShopItem(name: 'name', stock: 1, code: 'code');
+          final EShopItem dummyItem = EShopItem();
 
           shop.addProduct(item: dummyItem);
 
           /// Step 2: Perform the Test
-          final bool result = shop.checkProduct(codeProduct: dummyItem.code);
+          final bool result = shop.checkProduct(codeProduct: "Product's Code");
 
           /// Step 3: Compare results
           expect(result, true);

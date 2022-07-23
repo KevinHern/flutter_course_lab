@@ -33,7 +33,7 @@ class NavDrawer extends StatelessWidget {
               /// Change font style
               child: Text(
                 'Bienvenido',
-                style: Theme.of(context).textTheme.subtitle1,
+                style: null,
               ),
             ),
           ),
@@ -43,11 +43,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.list_alt,
-              color: Theme.of(context).primaryColor,
+              color: null,
             ),
             title: Text(
               'Form',
-              style: Theme.of(context).textTheme.subtitle1,
+              style: null,
             ),
             onTap: () => onFormPress(),
           ),
@@ -57,11 +57,11 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.shopping_cart,
-              color: Theme.of(context).primaryColor,
+              color: null,
             ),
             title: Text(
               'Shopping Cart',
-              style: Theme.of(context).textTheme.subtitle1,
+              style: null,
             ),
             onTap: () => onCartPress(),
           ),

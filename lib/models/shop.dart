@@ -21,27 +21,18 @@ class Shop {
     /// Once you finish implementing EShopClass, you will notice you have to modify this instruction.
     /// Repeat this 10 times.
     _goods.addAll([
-      EShopItem(name: "Product #01", stock: 4, code: "P001"),
-      EShopItem(name: "Product #02", stock: 8, code: "P002"),
-      EShopItem(name: "Product #03", stock: 7, code: "P003"),
-      EShopItem(name: "Product #04", stock: 2, code: "P004"),
-      EShopItem(name: "Product #05", stock: 1, code: "P005"),
-      EShopItem(name: "Product #06", stock: 2, code: "P006"),
-      EShopItem(name: "Product #07", stock: 10, code: "P007"),
-      EShopItem(name: "Product #08", stock: 4, code: "P008"),
-      EShopItem(name: "Product #09", stock: 5, code: "P009"),
-      EShopItem(name: "Product #10", stock: 1, code: "P010"),
+      EShopItem(),
     ]);
   }
 
   // TODO Laboratory #02
   /// Fix this getter function. This should return the total number of articles that the catalog has
   /// or in other words, the length of '_goods'
-  int get length => _goods.length;
+  int get length => 0;
 
   // TODO Laboratory #02
   /// Fix this getter function. This should return the catalog itself or '_goods'
-  List<EShopItem> get catalog => _goods;
+  List<EShopItem> get catalog => [];
 
   /* ----- Provided Code for Laboratory #04 ----- */
   bool checkProduct({required String codeProduct}) {
@@ -60,8 +51,8 @@ class Shop {
   void addProduct({required EShopItem item}) => _goods.add(item);
 
   // TODO Laboratory #05
-  bool isCatalogEmpty() => _goods.isEmpty;
+  bool isCatalogEmpty() => true;
 
   // TODO Laboratory #05
-  void clearCatalog() => _goods.clear();
+  void clearCatalog() => {};
 }

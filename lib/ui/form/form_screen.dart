@@ -28,14 +28,13 @@ class EShopFormScreen extends StatelessWidget {
           /// When we press this button, the Navigator should take us to the root Screen of our application
           /// First check if its possible to pop with Navigator.of(context).canPop() and then perform the pop()
           /// operation
-          onPressed: () =>
-              Navigator.of(context).canPop() ? Navigator.of(context).pop() : {},
+          onPressed: () => {},
         ),
         // TODO Laboratory #04
         /// Here you put your Shop's name
         title: Text(
-          'Cool Shop',
-          style: Theme.of(context).textTheme.headline1,
+          "Your Shop's Name",
+          style: null,
         ),
       ),
       body: SingleChildScrollView(
@@ -48,7 +47,7 @@ class EShopFormScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: padding),
                 child: Text(
                   "Formulario",
-                  style: Theme.of(context).textTheme.headline1,
+                  style: null,
                 ),
               ),
 

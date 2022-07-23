@@ -35,9 +35,9 @@ class MyApp extends StatelessWidget {
         /// You have to substitute the 'null' value with const Color(0xFF9ccc65)
         /// The prefix '0xFF' tells Flutter to interpret the hex color and the Fs indicate the alpha value.
         /// Do the same with the 2 variations
-        primaryColor: const Color(0xFF9ccc65),
-        primaryColorLight: const Color(0xFFcfff95),
-        primaryColorDark: const Color(0xFF6b9b37),
+        primaryColor: null,
+        primaryColorLight: null,
+        primaryColorDark: null,
 
         // TODO Laboratory #04
         /// Select one font for a Headline, Subtitle and Body text and write them here. You will likely use
@@ -54,30 +54,20 @@ class MyApp extends StatelessWidget {
             fontStyle: FontStyle.italic,
             color: Colors.black.withOpacity(0.75),
           ),
-          subtitle1: GoogleFonts.lora(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
-            color: Colors.black.withOpacity(0.85),
-          ),
-          bodyText1: GoogleFonts.hindMadurai(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
-            color: Colors.black.withOpacity(0.95),
-          ),
+          subtitle1: null,
+          bodyText1: null,
         ),
 
         // TODO Laboratory #04
         /// Set the AppBar's main color to the primary Color. In other words, copy the color
         appBarTheme: const AppBarTheme(
-          color: Color(0xFF9ccc65),
+          color: null,
         ),
       ),
 
       // TODO Laboratory #05
       /// Remove this line and implement the TODO below this one
-      //home: const MainScreen(),
+      home: const MainScreen(),
 
       // TODO Laboratory #05
       /// Before Laboratory #05, we have been using the property 'home'
@@ -89,7 +79,7 @@ class MyApp extends StatelessWidget {
       /// Your task is to get rid of the previous implementation, uncomment the initialRoute and assign '/' as the
       /// initialRoute.
 
-      initialRoute: '/',
+      // initialRoute: '/',
 
       /// Once you have defined the initialRoute, the next step is to implement the Route Map
       /// in the property 'routes'.
@@ -99,9 +89,9 @@ class MyApp extends StatelessWidget {
       ///
       /// Your task is to uncomment routes and implement a translation between '/' and ItemDisplay Screen
 
-      routes: {
-        '/': (context) => const MainScreen(),
-      },
+      // routes: {
+      //   '/': (context) => const Container(),
+      // },
 
       /// And the last step is to implement the onGenerateRoute property which allows you to pass arguments between
       /// screens. That means, you can share information between them and keep that information consistent across all the screens.
@@ -110,57 +100,50 @@ class MyApp extends StatelessWidget {
       /// Your task is to uncomment and implement the onGenerateRoute and pass a Shop Model to the EShopFormScreen Widget.
       /// The Route Name for the EShopFormScreen Widget is 'form'
 
-      onGenerateRoute: (settings) {
-        /// The variable 'settings' contains more information when jumping from one screen to another.
-        /// The most common information you will retrieve and manipulate are the route name and arguments.
-        /// Take into consideration that sometimes you may need to cast the arguments to match the correct datatype
-        /// since the arguments come as 'object' datatype which essentially represents anything.
-        /// I left an example so you can understand better
-
-        /// settings.name contains the route name we want to jump, so we compare the name with many different options
-        switch (settings.name) {
-          case '/form':
-
-            /// Here we retrieve the arguments and the part 'as String' is the casting operation.
-            /// In this example, we convert the arguments into a String because we need it. The Datatype may
-            /// change depending of what arguments the screen needs
-            final Shop shop = settings.arguments! as Shop;
-
-            return PageTransition(
-              child: EShopFormScreen(shop: shop),
-              type: PageTransitionType.fade,
-              settings: settings,
-              duration: const Duration(seconds: 1),
-            );
-
-          // TODO Laboratory #07
-          /// Implement the option to jump to the MyCartScreen Widget. Have in mind it needs 2 different arguments
-          /// that come packed in a list. First cast the arguments list explicitly into a List<dynamic>
-          /// and then extract the arguments individually. Don't forget to cast them too
-          /// Ill help you with one:
-          /// final List castedArguments = (settings.arguments!) as List<dynamic>;
-          /// final Shop shop = castedArguments as Shop; (assuming it comes in the first position)
-          case '/cart':
-            final List castedArguments = (settings.arguments!) as List<dynamic>;
-            final Shop shop = castedArguments[0] as Shop;
-            final MyCart myCart = castedArguments[1] as MyCart;
-
-            return PageTransition(
-              child: MyCartScreen(
-                shop: shop,
-                myCart: myCart,
-              ),
-              type: PageTransitionType.fade,
-              settings: settings,
-              duration: const Duration(seconds: 1),
-            );
-
-          /// The default option is executed when settings.name didn't match with any of the cases implemented above.
-          /// In this case, we throw an exception but in some other applications you may do something different
-          default:
-            throw Exception("Unknown Route detected");
-        }
-      },
+      // onGenerateRoute: (settings) {
+      //   /// The variable 'settings' contains more information when jumping from one screen to another.
+      //   /// The most common information you will retrieve and manipulate are the route name and arguments.
+      //   /// Take into consideration that sometimes you may need to cast the arguments to match the correct datatype
+      //   /// since the arguments come as 'object' datatype which essentially represents anything.
+      //   /// I left an example so you can understand better
+      //
+      //   /// settings.name contains the route name we want to jump, so we compare the name with many different options
+      //   switch (settings.name) {
+      //     case '/example':
+      //
+      //       /// Here we retrieve the arguments and the part 'as String' is the casting operation.
+      //       /// In this example, we convert the arguments into a String because we need it. The Datatype may
+      //       /// change depending of what arguments the screen needs
+      //       final String someArgument = settings.arguments! as String;
+      //
+      //       return PageTransition(
+      //         child: Container(),
+      //         type: PageTransitionType.fade,
+      //         settings: settings,
+      //         duration: const Duration(seconds: 1),
+      //       );
+      //
+      //     // TODO Laboratory #07
+      //     /// Implement the option to jump to the MyCartScreen Widget. Have in mind it needs 2 different arguments
+      //     /// that come packed in a list. First cast the arguments list explicitly into a List<dynamic>
+      //     /// and then extract the arguments individually. Don't forget to cast them too
+      //     /// Ill help you with one:
+      //     /// final List castedArguments = (settings.arguments!) as List<dynamic>;
+      //     /// final Shop shop = castedArguments as Shop; (assuming it comes in the first position)
+      //     case '':
+      //       return PageTransition(
+      //         child: Container(),
+      //         type: PageTransitionType.fade,
+      //         settings: settings,
+      //         duration: const Duration(seconds: 1),
+      //       );
+      //
+      //     /// The default option is executed when settings.name didn't match with any of the cases implemented above.
+      //     /// In this case, we throw an exception but in some other applications you may do something different
+      //     default:
+      //       throw Exception("Unknown Route detected");
+      //   }
+      // },
     );
   }
 }

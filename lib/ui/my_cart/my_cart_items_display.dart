@@ -45,38 +45,7 @@ class MyCartItemsDisplayState extends State<MyCartItemsDisplay> {
     /// It is similar to what you did in the ui/items_display_screen.dart file but be careful
     /// with the order of the instructions
     return Center(
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: padding / 2),
-          child: ListView.builder(
-            itemCount: widget.myCart.length,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: padding,
-                  vertical: padding / 2,
-                ),
-                child: Card(
-                  elevation: 10.0,
-                  child: ListTile(
-                    title: Text(
-                      "Producto: (${widget.myCart.myCart[index].code}) ${widget.myCart.myCart[index].name}",
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                    trailing: ElevatedButton(
-                      child: const Icon(Icons.add_box_rounded),
-                      onPressed: () => setState(() {
-                        widget.myCart.myCart[index].stock++;
-                        widget.myCart.removeProduct(index: index);
-                      }),
-                    ),
-                  ),
-                ),
-              );
-            },
-          ),
-        ),
-      ),
+      child: null,
     );
   }
 }

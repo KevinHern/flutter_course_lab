@@ -45,8 +45,8 @@ class MainScreenState extends State<MainScreen> {
           /// Remember to edit the font type. This is the title and you want to emphasize the name
           /// of the shop so the people can easily see it and remember it
           title: Text(
-            'Cool Shop',
-            style: Theme.of(context).textTheme.headline1,
+            "Your Shop's Name",
+            style: null,
           ),
         ),
 
@@ -70,11 +70,8 @@ class MainScreenState extends State<MainScreen> {
           /// 'arguments' property of the pushNamed function!
           ///
           /// You will find Laboratory #07 instructions but ignore them for the time being
-          onFormPress: () async {
+          onFormPress: () {
             // Your function here
-            await Navigator.of(context)
-                .pushNamed('/form', arguments: shop)
-                .whenComplete(() => setState(() {}));
 
             // TODO Laboratory #07
             /// Once you have finished the MyCart Model implementation and completed MyCartScreen Screen, fix this
@@ -93,18 +90,12 @@ class MainScreenState extends State<MainScreen> {
           /// You can't send multiple arguments using the current API. The workaround is send a list that
           /// contains all the arguments you need and in the onGenerateRoute, you extract the arguments from
           /// the list then cast
-          onCartPress: () async => await Navigator.of(context).pushNamed(
-            '/cart',
-            arguments: [shop, myCart],
-          ).whenComplete(() => setState(() {})),
+          onCartPress: () => {},
         ),
 
         // TODO Laboratory #02
         /// Replace the Widget with the Widget that contains your screen
-        body: ItemsDisplay(
-          shop: shop,
-          myCart: myCart,
-        ),
+        body: Container(),
       ),
     );
   }

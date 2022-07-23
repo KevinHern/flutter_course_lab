@@ -10,13 +10,11 @@ class EShopItem {
   /// - stock
   /// - code
 
-  final String name, code;
-  int stock;
+  final String name;
 
   // TODO Laboratory #02
   /// The constructor is going to receive the name and code of the article, and the stock number
   /// As part of best practices, use NAMED PARAMETERS
-  EShopItem({required this.name, required this.stock, required this.code});
 
   /* ---- Laboratory #07 function ----- */
   Map<String, dynamic> modelToJson() => {

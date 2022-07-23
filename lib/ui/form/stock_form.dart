@@ -29,9 +29,6 @@ class StockFormState extends State<StockForm> {
   // TODO Laboratory #04
   /// Since a shop article requires 3 fields to be created, our form will contain 3 input fields that each one will.
   /// The class is TextEditingController()
-  final TextEditingController nameController = TextEditingController(),
-      codeController = TextEditingController(),
-      stockController = TextEditingController();
 
   void _showFeedback({required String message}) => showDialog(
         context: context,
@@ -72,7 +69,7 @@ class StockFormState extends State<StockForm> {
         child: Form(
           // TODO Laboratory #04
           /// The Form Widget has a property called 'key' which is where we put the formKey we created before
-          key: _formKey,
+          key: null,
           //autovalidateMode: AutovalidateMode.always,
           child: Column(
             children: [
@@ -104,16 +101,16 @@ class StockFormState extends State<StockForm> {
                 padding: const EdgeInsets.only(bottom: padding),
                 child: TextFormField(
                   decoration: const InputDecoration(
-                    hintText: "Nombre del Producto",
-                    icon: Icon(Icons.credit_card_outlined),
-                    labelText: "Nombre del Producto",
+                    hintText: "Some Text Here",
+                    icon: Icon(Icons.person),
+                    labelText: "Some Text Here",
                   ),
-                  style: Theme.of(context).textTheme.bodyText1,
-                  controller: nameController,
+                  style: null,
+                  controller: null,
                   readOnly: false,
-                  textCapitalization: TextCapitalization.words,
-                  textInputAction: TextInputAction.next,
-                  keyboardType: TextInputType.text,
+                  textCapitalization: TextCapitalization.none,
+                  textInputAction: TextInputAction.none,
+                  keyboardType: TextInputType.none,
                   validator: (String? value) {
                     // TODO Laboratory #04
                     /// Some checks for any type of Input Field:
@@ -123,71 +120,7 @@ class StockFormState extends State<StockForm> {
                     /// If the input field is acceptable, then you have to return null. The null values tells the form
                     /// that this particular Input Field contains a valid value.
 
-                    if (value == null) {
-                      return null;
-                    } else {
-                      if (value.trim().isEmpty) {
-                        return "Llene el campo por favor";
-                      } else {
-                        return null;
-                      }
-                    }
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: padding),
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    hintText: "Existencias",
-                    icon: Icon(Icons.add_box_rounded),
-                    labelText: "Existencias",
-                  ),
-                  style: Theme.of(context).textTheme.bodyText1,
-                  controller: stockController,
-                  readOnly: false,
-                  textInputAction: TextInputAction.next,
-                  keyboardType: TextInputType.number,
-                  inputFormatters: [
-                    FilteringTextInputFormatter.digitsOnly,
-                  ],
-                  validator: (String? value) {
-                    if (value == null) {
-                      return null;
-                    } else {
-                      if (value.trim().isEmpty) {
-                        return "Llene el campo por favor";
-                      } else {
-                        return null;
-                      }
-                    }
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: padding),
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    hintText: "Código",
-                    icon: Icon(Icons.account_tree),
-                    labelText: "Código",
-                  ),
-                  style: Theme.of(context).textTheme.bodyText1,
-                  controller: codeController,
-                  readOnly: false,
-                  textCapitalization: TextCapitalization.characters,
-                  textInputAction: TextInputAction.done,
-                  keyboardType: TextInputType.text,
-                  validator: (String? value) {
-                    if (value == null) {
-                      return null;
-                    } else {
-                      if (value.trim().isEmpty) {
-                        return "Llene el campo por favor";
-                      } else {
-                        return null;
-                      }
-                    }
+                    return null;
                   },
                 ),
               ),
@@ -217,10 +150,6 @@ class StockFormState extends State<StockForm> {
                         /// manipulate the value that said Input Field contains.
                         /// With this in mind, you can set the 'text' property of each controller to blank and then update
                         /// the form with the usage of setState().
-
-                        nameController.text = blank;
-                        stockController.text = blank;
-                        codeController.text = blank;
                       },
                     ),
                   ),
@@ -247,20 +176,15 @@ class StockFormState extends State<StockForm> {
                       /// 1) Validate the current Form
                       /// The formKey has a property called 'currentState' to which you can check if its valid
                       /// by calling the 'validate()' method on it
-                      bool isFormValid = _formKey.currentState!.validate();
-                      print(isFormValid);
+                      bool isFormValid = true;
 
-                      /// 3) Intermediary Operations
+                      /// 2) Intermediary Operations
                       if (isFormValid) {
-                        /// Create a new EShopItem Model and fill up the constructor values using the controllers
+                        /// 3) Create a new EShopItem Model and fill up the constructor values using the controllers
                         /// Remember, the controller is a gateway between your code and the user values.
                         /// You can extract said values by using the 'text' property of the controllers
 
-                        final EShopItem newItem = EShopItem(
-                          name: nameController.text,
-                          stock: int.parse(stockController.text),
-                          code: codeController.text,
-                        );
+                        final EShopItem newItem = EShopItem();
 
                         /// As you notice, the code Product is a unique value. It means that 2 products in
                         /// your catalog can't have the same Code Product. If the product you are adding
@@ -269,14 +193,16 @@ class StockFormState extends State<StockForm> {
                         /// I'll give you the code to check for it but feel free to inspect it. The function is
                         /// called 'checkProduct' located in the file models/shop.dart
 
-                        final bool productAlreadyExists =
-                            widget.shop.checkProduct(codeProduct: newItem.code);
+                        final bool productAlreadyExists = widget.shop
+                            .checkProduct(
+                                codeProduct: 'Something important goes here');
 
                         if (!productAlreadyExists) {
                           /// And finally, if everything is correct, then add the new product you created to your
                           /// Shop's catalog. Use the function 'addProduct' which is located in
                           /// the file models/eshop_item.dart
-                          widget.shop.addProduct(item: newItem);
+
+                          // Function here
 
                           /// If everything is right, then lets display some positive feedback to the user
                           _showFeedback(
